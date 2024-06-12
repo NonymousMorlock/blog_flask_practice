@@ -3,8 +3,8 @@ from datetime import date
 from flask_login import current_user
 
 from database import db
-from models import BlogPost, Comment
-from utils import Response
+from app.models import BlogPost, Comment
+from app.utils import Response
 
 
 class PostService:

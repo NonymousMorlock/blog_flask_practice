@@ -17,9 +17,7 @@ def admin_only(func: Callable) -> Callable:
     @login_required
     def closure(*args, **kwargs):
         if current_user.id == 1:
-            print('User is Admin...Authorized')
             return func(*args, **kwargs)
-        print('User is not an Admin...Forbidden Access')
         return abort(403)
 
     closure.__name__ = func.__name__
