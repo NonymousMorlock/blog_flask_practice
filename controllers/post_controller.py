@@ -46,7 +46,7 @@ def show_post(post_id):
         #     flash(response.error_message, response.error_category)
         #     return redirect(url_for('post.get_all_posts'))
 
-        return redirect(url_for('post.show_posts', post_id=post_id))
+        return redirect(url_for('post.show_post', post_id=post_id))
     return render_template("post.html", post=response.data, form=form)
 
 
