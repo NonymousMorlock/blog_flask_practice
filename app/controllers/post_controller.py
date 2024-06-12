@@ -2,11 +2,11 @@ from flask import Blueprint, render_template, redirect, url_for, flash, session
 from flask_login import current_user
 
 from database import db
-from forms import CreatePostForm, CommentForm
-from models.blog_post import BlogPost
-from services import PostService
-from utils import Response
-from utils.utils import admin_only
+from app.forms import CreatePostForm, CommentForm
+from app.models.blog_post import BlogPost
+from app.services import PostService
+from app.utils import Response
+from app.utils.utils import admin_only
 
 blog_post = Blueprint('post', __name__)
 
