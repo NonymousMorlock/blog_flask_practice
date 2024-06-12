@@ -4,8 +4,8 @@ from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from database import db
-from models import User
-from utils import Response
+from app.models import User
+from app.utils import Response
 
 
 class AuthService:

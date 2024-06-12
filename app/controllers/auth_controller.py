@@ -1,9 +1,9 @@
 from flask import Blueprint, request, flash, redirect, url_for, render_template
 from flask_login import login_user, login_required, logout_user
 
-from forms import RegistrationForm, LoginForm
-from services import AuthService
-from utils import Response
+from app.forms import RegistrationForm, LoginForm
+from app.services import AuthService
+from app.utils import Response
 
 auth = Blueprint('auth', __name__)
 

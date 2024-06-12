@@ -4,8 +4,8 @@ from sqlalchemy import Integer, Text, ForeignKey
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from models import User
-    from models import BlogPost
+    from app.models import User
+    from app.models import BlogPost
 
 
 class Comment(db.Model):

@@ -6,8 +6,8 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from database import db
 
 if TYPE_CHECKING:
-    from models import User
-    from models import Comment
+    from app.models import User
+    from app.models import Comment
 
 
 class BlogPost(db.Model):
