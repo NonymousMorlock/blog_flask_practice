@@ -81,10 +81,10 @@ def edit_post(post_id):
     if edit_form.validate_on_submit():
         response: Response = PostService.update_post(
             post=post,
-            title=edit_form.title,
-            subtitle=edit_form.subtitle,
-            img_url=edit_form.img_url,
-            body=edit_form.body
+            title=edit_form.title.data,
+            subtitle=edit_form.subtitle.data,
+            img_url=edit_form.img_url.data,
+            body=edit_form.body.data
         )
         if response.error_message:
             flash(response.error_message, response.error_category)
